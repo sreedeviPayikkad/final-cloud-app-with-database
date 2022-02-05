@@ -1,7 +1,6 @@
 from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from matplotlib.style import context
 # <HINT> Import any new Models here
 from .models import Course, Enrollment, Question, Choice, Submission
 from django.contrib.auth.models import User
