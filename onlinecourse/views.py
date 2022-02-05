@@ -150,11 +150,13 @@ def show_exam_result(request, course_id, submission_id):
         #print(choice.choice_text)
         if choice.is_correct:
             score = score + choice.question_id.grade
-        
+        else:
+            score = score - choice.question_id.grade
+
     #print(f"score = {score}")
     if score > 0:
         score = score * 25 #we are evaluating this quiz for a set of 4 question of with 4 correct choices in total 
-    elif score < 0:
+    elif score <= 0:
         score = 0
 
     
